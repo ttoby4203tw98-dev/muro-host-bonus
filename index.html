@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MURO 暮若｜主播獎金表</title>
+<style>
+  :root{
+    --green-900:#1f3a2e;
+    --green-700:#2d5a45;
+    --green-500:#4a7c5d;
+    --green-200:#cfe3d6;
+    --green-100:#e6f0ea;
+    --cream:#f7f4ec;
+    --paper:#fffdf9;
+    --ink:#2b322d;
+    --muted:#6f7a72;
+    --gold:#c2a268;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.7;
+    padding:32px 16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;}
+
+  /* Header */
+  .head{text-align:center;padding:36px 24px 28px;}
+  .brand{
+    font-size:14px;letter-spacing:.5em;color:var(--green-500);
+    font-weight:600;text-indent:.5em;
+  }
+  .brand b{color:var(--green-700);}
+  .title{
+    font-size:30px;font-weight:800;color:var(--green-900);
+    margin-top:10px;letter-spacing:.06em;
+  }
+  .rule{
+    width:54px;height:3px;border-radius:3px;
+    background:var(--gold);margin:16px auto 0;
+  }
+  .sub{color:var(--muted);font-size:14px;margin-top:12px;}
+
+  /* Card */
+  .card{
+    background:var(--paper);
+    border:1px solid var(--green-200);
+    border-radius:18px;
+    padding:26px 24px;
+    margin-bottom:22px;
+    box-shadow:0 8px 24px rgba(31,58,46,.06);
+  }
+  .card h2{
+    font-size:18px;color:var(--green-700);
+    display:flex;align-items:center;gap:10px;
+    margin-bottom:18px;letter-spacing:.04em;
+  }
+  .card h2::before{
+    content:"";width:6px;height:18px;border-radius:3px;
+    background:var(--green-500);display:inline-block;
+  }
+
+  /* Table */
+  table{width:100%;border-collapse:collapse;font-size:15px;border-radius:12px;overflow:hidden;}
+  thead th{
+    background:var(--green-700);color:#fff;
+    padding:13px 16px;text-align:left;font-weight:600;letter-spacing:.04em;
+  }
+  tbody td{padding:13px 16px;border-bottom:1px solid var(--green-100);}
+  tbody tr:nth-child(even){background:var(--green-100);}
+  tbody tr:last-child td{border-bottom:none;}
+  .rate{font-weight:800;color:var(--green-700);}
+  tbody tr.top td{background:var(--green-200);}
+  tbody tr.top .rate{color:var(--green-900);}
+  .num{font-variant-numeric:tabular-nums;color:var(--green-500);}
+
+  /* Note blocks */
+  .note{
+    background:var(--green-100);
+    border-left:4px solid var(--green-500);
+    border-radius:8px;padding:14px 18px;margin-top:16px;font-size:14px;
+  }
+  .note .k{color:var(--green-700);font-weight:700;}
+  .formula{
+    text-align:center;background:var(--green-900);color:#fff;
+    border-radius:10px;padding:16px;font-size:15px;letter-spacing:.03em;
+  }
+  .formula b{color:var(--gold);}
+  ol.tips{margin:6px 0 0 20px;font-size:14px;color:var(--ink);}
+  ol.tips li{margin:6px 0;}
+  ol.tips b{color:var(--green-700);}
+
+  .foot{text-align:center;color:var(--muted);font-size:12px;padding:8px 0 4px;letter-spacing:.06em;}
+
+  @media (max-width:520px){
+    .title{font-size:24px;}
+    table{font-size:13.5px;}
+    thead th,tbody td{padding:11px 10px;}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header class="head">
+      <div class="brand">MURO <b>暮若</b></div>
+      <h1 class="title">主播獎金提成表</h1>
+      <div class="rule"></div>
+      <div class="sub">2026 年 6 月份起實施</div>
+    </header>
+
+    <section class="card">
+      <h2>提成級距</h2>
+      <table>
+        <thead>
+          <tr><th>當日實際銷售額</th><th style="text-align:right">提成</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>小於 3 萬</td><td style="text-align:right" class="rate">2%</td></tr>
+          <tr><td>3 萬至 6 萬</td><td style="text-align:right" class="rate">3%</td></tr>
+          <tr><td>6 萬至 10 萬</td><td style="text-align:right" class="rate">4%</td></tr>
+          <tr><td>大於 10.01 萬</td><td style="text-align:right" class="rate">5%</td></tr>
+          <tr class="top"><td>150,000 以上</td><td style="text-align:right" class="rate">8%</td></tr>
+        </tbody>
+      </table>
+
+      <div class="formula">
+        實際銷售額 ＝ 自然銷售額 <b>×0.7</b>（平台扣點 − 稅金 − 退貨率）
+      </div>
+
+      <div class="note">
+        <span class="k">備註</span><br>
+        一、當日實際銷售額是當天個人場次直播銷售額。<br>
+        二、該計算方法僅適用於自然流與微付費狀態。
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>計算示例</h2>
+      <table>
+        <thead>
+          <tr><th>實際銷售額</th><th>計算方式</th><th style="text-align:right">提成</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>10,000 – 30,000</td><td class="num">30,000 × 2%</td><td style="text-align:right" class="rate">600</td></tr>
+          <tr><td>30,000 – 60,000</td><td class="num">60,000 × 3%</td><td style="text-align:right" class="rate">1,800</td></tr>
+          <tr><td>60,000 – 100,000</td><td class="num">100,000 × 4%</td><td style="text-align:right" class="rate">4,000</td></tr>
+          <tr><td>100,001 以上</td><td class="num">100,001 × 5%</td><td style="text-align:right" class="rate">5,000</td></tr>
+          <tr class="top"><td>150,000 以上</td><td class="num">150,000 × 8%</td><td style="text-align:right" class="rate">12,000</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>其他說明</h2>
+      <ol class="tips">
+        <li>本指標適用於 <b>2026 年 6 月份起</b>實施，如有變動將會再次通知。</li>
+        <li>以上計算單位為台幣，換算方式：<b>（提成）÷ 4.7 ＝ 實際到手人民幣</b>。</li>
+      </ol>
+    </section>
+
+    <div class="foot">MURO 暮若 ・ 主播獎金制度</div>
+
+  </div>
+</body>
+</html>
